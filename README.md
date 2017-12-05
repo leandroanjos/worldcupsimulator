@@ -1,4 +1,4 @@
-# worldcupsimulator
+# World Cup Simulator - Russia 2018
 A react-native app to simulate game results in Fifa World Cup - Russia 2018
 
 ## This project project was developed only to study the react-native.
