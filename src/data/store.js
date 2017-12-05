@@ -1,0 +1,38 @@
+const Store = {
+	teams:[
+		{ group: "A",	position: "1", code: "RUS", name: "Russia"	},
+		{ group: "A",	position: "2", code: "ARA", name: "Arabia Saudita"	},
+		{ group: "A",	position: "3", code: "EGI", name: "Egito"	},
+		{ group: "A",	position: "4", code: "URU", name: "Uruguai"	},
+		{ group: "B",	position: "1", code: "POR", name: "Portugal"	},
+		{ group: "B",	position: "2", code: "ESP", name: "Espanha"	},
+		{ group: "B",	position: "3", code: "MAR", name: "Marrocos"	},
+		{ group: "B",	position: "4", code: "IRA", name: "Irã"	},
+		{ group: "C",	position: "1", code: "FRA", name: "França"	},
+		{ group: "C",	position: "2", code: "AUS", name: "Australia"	},
+		{ group: "C",	position: "3", code: "PER", name: "Peru"	},
+		{ group: "C",	position: "4", code: "DIN", name: "Dinamarca"	},
+		{ group: "D",	position: "1", code: "ARG", name: "Argentina"	},
+		{ group: "D",	position: "2", code: "ISL", name: "Islândia"	},
+		{ group: "D",	position: "3", code: "CRO", name: "Croácia"	},
+		{ group: "D",	position: "4", code: "NIG", name: "Nigéria"	},
+		{ group: "E",	position: "1", code: "BRA", name: "Brasil"	},
+		{ group: "E",	position: "2", code: "SUI", name: "Suiça"	},
+		{ group: "E",	position: "3", code: "COS", name: "Costa Rica"	},
+		{ group: "E",	position: "4", code: "SER", name: "Sérvia"	},
+		{ group: "F",	position: "1", code: "ALE", name: "Alemanha"	},
+		{ group: "F",	position: "2", code: "MEX", name: "México"	},
+		{ group: "F",	position: "3", code: "SUE", name: "Suécia"	},
+		{ group: "F",	position: "4", code: "COR", name: "Coreia do Sul"	},
+		{ group: "G",	position: "1", code: "BEL", name: "Bélgica"	},
+		{ group: "G",	position: "2", code: "PAN", name: "Panamá"	},
+		{ group: "G",	position: "3", code: "TUN", name: "Tunísia"	},
+		{ group: "G",	position: "4", code: "ING", name: "Inglaterra"	},
+		{ group: "H",	position: "1", code: "POL", name: "Polônia"	},
+		{ group: "H",	position: "2", code: "SEN", name: "Senegal"	},
+		{ group: "H",	position: "3", code: "COL", name: "Colombia"	},
+		{ group: "H",	position: "4", code: "JAP", name: "Japão"	},
+	]
+}
+
+export default Store
