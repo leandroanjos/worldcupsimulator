@@ -25,8 +25,8 @@ export default class Home extends Component {
 
     return (
       <View style={styles.container}>
-        <View>
-          <Text style={styles.textGroupName}>{group.name}</Text>
+        <View style={styles.groupTitle}>
+          <Text style={styles.textGroupName}>Group {group.name}</Text>
         </View>
         <View style={styles.content}>
           <MatchList group={group} teams={store.teams} matches={store.matches}/>
@@ -43,18 +43,23 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center'
   },
+  groupTitle: {
+    flex: 1, 
+    flexDirection: 'column', 
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#4682B4'
+  },
+  textGroupName: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold'
+  },
   content: {
-    padding: 20,
+    paddingHorizontal: 20,
     flex: 9, 
     flexDirection: 'row', 
     alignItems: 'stretch',
     justifyContent: 'space-between'
-  },
-  column: {
-    flex: 1, 
-    flexDirection: 'column', 
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    marginHorizontal: 10
   }
 })

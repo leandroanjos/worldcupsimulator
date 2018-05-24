@@ -12,10 +12,10 @@ const reducerCreate = params => {
 }
 
 export default Routers = () => (
-  <Router createReducer={reducerCreate} sceneStyle={{ backgroundColor: '#fff' }} >
+  <Router createReducer={reducerCreate} sceneStyle={{ backgroundColor: '#d6d6d6' }} >
     <Stack key="root">
       <Scene key="home" component={Home} hideNavBar={true} />
-      <Scene key="match" component={Match} />    
+      <Scene key="match" component={Match} navTransparent />    
     </Stack>
   </Router>
 )

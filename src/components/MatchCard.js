@@ -18,19 +18,20 @@ export default class MatchCard extends Component {
     
     const match = matches.filter((match) => match.code === matchCode)[0]
 
-    const teamA = teams[match.teams[0]]
-    const teamB = teams[match.teams[1]]
+    const teamA = teams[match.teams[0] - 1]
+    const teamB = teams[match.teams[1] - 1]
     return (
       <View style={styles.container}>
         <View style={styles.columnFlag}>  
-            <Flag icon={teamA.icon}/>
-            <Text>{teamA.name}</Text>
+          <Text style={styles.textTeamName}>{teamA.name}</Text>
+          <Flag icon={teamA.icon}/>
         </View>
         <View style={styles.columnGroupName}>
           <Text style={styles.textGroupName}>x</Text>
+          <Text style={styles.textDate}>{match.day} {match.hour}</Text>
         </View>
         <View style={styles.columnFlag}>
-          <Text>{teamB.name}</Text>  
+          <Text style={styles.textTeamName}>{teamB.name}</Text>
           <Flag icon={teamB.icon}/>
         </View>
       </View>
@@ -44,8 +45,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     alignItems: 'stretch',
     justifyContent: 'center',
-    backgroundColor: '#1e90ff',
-    marginVertical: 2
+    backgroundColor: '#fff',
+    marginVertical: 10
   },
   columnFlag: {
     flex: 2, 
@@ -61,8 +62,18 @@ const styles = StyleSheet.create({
   },
   textGroupName: {
     textAlign: 'center',
-    color: '#FFF',
+    color: '#483D8B',
     fontSize: 22,
     fontWeight: 'bold'
+  },
+  textTeamName: {
+    textAlign: 'center',
+    color: '#483D8B',
+    fontSize: 14
+  },
+  textDate: {
+    textAlign: 'center',
+    color: '#483D8B',
+    fontSize: 10
   }
 })

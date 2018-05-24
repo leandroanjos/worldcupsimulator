@@ -20,7 +20,7 @@ export default class Home extends Component {
             <GroupCard groupName='A' groups={store.groups} teams={store.teams} />
             <GroupCard groupName='C' groups={store.groups} teams={store.teams} />
             <GroupCard groupName='E' groups={store.groups} teams={store.teams} />
-            <GroupCard groupName='F' groups={store.groups} teams={store.teams} />
+            <GroupCard groupName='G' groups={store.groups} teams={store.teams} />
           </View>
           <View style={styles.column}>
             <GroupCard groupName='B' groups={store.groups} teams={store.teams} />
@@ -39,8 +39,7 @@ const styles = StyleSheet.create({
     flex: 1, 
     flexDirection: 'column', 
     alignItems: 'stretch',
-    justifyContent: 'center',
-    backgroundColor: '#d6d6d6'
+    justifyContent: 'center'
   },
   content: {
     padding: 10,

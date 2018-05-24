@@ -4,13 +4,18 @@ import { Button } from 'react-native-elements'
 import { Actions } from 'react-native-router-flux'
 import MatchCard from './MatchCard'
 
-export default class GroupCard extends Component {
+export default class MatchList extends Component {
   constructor(props){
     super(props)
   }
 
   getMatchCode = (groupCode, round, gameNumber) => {
-    return ((groupCode - 1) * 2) + ((round -1) * 16) - (gameNumber - 1) + 1
+    console.log('************')
+    console.log('dados: ', groupCode, round, gameNumber)
+    const matchNumber = ((groupCode - 1) * 2) + ((round -1) * 16) + gameNumber
+    
+    console.log('result:..... ' + matchNumber)
+    return matchNumber
   }
 
   render() {
@@ -40,9 +45,7 @@ const styles = StyleSheet.create({
     flex: 1, 
     flexDirection: 'column', 
     alignItems: 'stretch',
-    justifyContent: 'center',
-    backgroundColor: '#1e90ff',
-    marginVertical: 2
+    justifyContent: 'center'
   },
   columnFlag: {
     flex: 2, 
