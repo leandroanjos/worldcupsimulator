@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { Button } from 'react-native-elements'
 import { Actions } from 'react-native-router-flux'
-import GroupCard from './GroupCard'
+import Header from '../../components/Header'
+import GroupCard from '../../components/GroupCard'
 import store from '../../data/store'
 
 export default class Home extends Component {
@@ -13,22 +14,19 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.header} >
-          <Text style={styles.headerTitle}>FIFA World Cup 2018</Text>
-          <Text style={styles.headerSubtitle}>*** Simulator ***</Text>
-        </View>
+        <Header />
         <View style={styles.content}>
           <View style={styles.column}>
-            <GroupCard group='A' teams={store.teams} />
-            <GroupCard group='C' teams={store.teams} />
-            <GroupCard group='E' teams={store.teams} />
-            <GroupCard group='F' teams={store.teams} />
+            <GroupCard groupName='A' groups={store.groups} teams={store.teams} />
+            <GroupCard groupName='C' groups={store.groups} teams={store.teams} />
+            <GroupCard groupName='E' groups={store.groups} teams={store.teams} />
+            <GroupCard groupName='F' groups={store.groups} teams={store.teams} />
           </View>
           <View style={styles.column}>
-            <GroupCard group='B' teams={store.teams} />
-            <GroupCard group='D' teams={store.teams} />
-            <GroupCard group='F' teams={store.teams} />
-            <GroupCard group='H' teams={store.teams} />
+            <GroupCard groupName='B' groups={store.groups} teams={store.teams} />
+            <GroupCard groupName='D' groups={store.groups} teams={store.teams} />
+            <GroupCard groupName='F' groups={store.groups} teams={store.teams} />
+            <GroupCard groupName='H' groups={store.groups} teams={store.teams} />
           </View>
         </View>
       </View>
@@ -41,23 +39,11 @@ const styles = StyleSheet.create({
     flex: 1, 
     flexDirection: 'column', 
     alignItems: 'stretch',
-    justifyContent: 'center'
-  },
-  header: {
-    flex: 3, 
-    flexDirection: 'column', 
-    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red'
-  },
-  headerTitle: {
-    fontSize: 32
-  },
-  headerSubtitle: {
-    fontSize: 28
+    backgroundColor: '#d6d6d6'
   },
   content: {
-    padding: 20,
+    padding: 10,
     flex: 9, 
     flexDirection: 'row', 
     alignItems: 'stretch',
@@ -67,7 +53,6 @@ const styles = StyleSheet.create({
     flex: 1, 
     flexDirection: 'column', 
     alignItems: 'stretch',
-    justifyContent: 'center',
-    marginHorizontal: 10
+    justifyContent: 'center'
   }
 })

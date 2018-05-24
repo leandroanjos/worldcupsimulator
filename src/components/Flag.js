@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Image } from 'react-native'
-import * as flags from './../../flags'
+import * as flags from './../flags'
 
 export default class GroupCard extends Component {
   constructor(props){
@@ -8,9 +8,9 @@ export default class GroupCard extends Component {
   }
 
   render() {
-    const { code } = this.props
+    const { icon } = this.props
 
-    const flag = flags[code]
+    const flag = flags[icon]
     const unknownFlag = flags['unknown']
 
     return (
